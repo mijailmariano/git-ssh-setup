@@ -23,7 +23,7 @@ This script automates the generation and setup of SSH keys for use with Git, esp
 
 2. **Run the Script**
     ```bash
-    python3 ssh_key_setup.py
+    python3 setupSSH.py
     ```
 
 ## Usage
@@ -55,7 +55,7 @@ If you have multiple keys and need to specify which to use with GitHub:
     ```
     Replace `id_rsa_git_YYYYMMDD_HHMMSS` with your key filename.
 
-### Start the SSH Agent Manually
+### Start the SSH Agent Manually (use as needed in your workflow)
 
 1. Start the SSH agent:
     ```bash
