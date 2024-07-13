@@ -5,6 +5,8 @@ from typing import Optional
 import datetime
 import subprocess
 
+# TO:DO create env, requirements.txt/yaml files
+
 def get_user_input(prompt: str) -> str:
     '''Get user input with a given prompt.'''
     return input(prompt).strip()
