@@ -4,14 +4,14 @@ This script creates and sets up SSH keys for Git services like GitHub, making it
 
 ## Features
 
-- [ ] Creates SSH key pairs with unique and timestamp
-- [ ] Sets up SSH for use with GitHub/GitLab
+- [x] Creates SSH key pairs with unique and timestamp
+- [x] Sets up SSH for use with GitHub/GitLab
 - [ ] ~~Adds keys to the SSH agent for convenience~~
 
 ## Requirements
 
-- [ ] Python 3.12+ 
-- [ ] Access to your UNIX-like terminal (Linux, macOS)
+- [x] Python 3.12+ 
+- [x] Access to your UNIX-like terminal (Linux, macOS)
 
 See `requirements.txt/environment.yaml` for Python requirements
 
@@ -23,29 +23,33 @@ See `requirements.txt/environment.yaml` for Python requirements
     cd <repository-directory>
     ```
 
-2. **Run the Script**
+2. **From Repo Directory, Run:**
     ```bash
     python3 setupSSH.py
     ```
 
 3. **Follow Prompts to Create Your SSH Key**
 
-### What It Does
+## What It Does
 
-Follow the prompts to enter your email address, which will be associated with your new SSH key. The script handles the rest, including:
+- [x] Links your email to your new SSH key
+- [x] Creates an SSH key pair in your home directory (~/.ssh/):
+  - Private key: File without .pub extension (keep this secret)
+  - Public key: File with .pub extension (this is added to GitHub)
+- [x] Will print your public key for easy copying
+- [x] Prints instructions to add your public key to GitHub or other Git services
 
-- Links your email to your new SSH key
-- Creates a  SSH key pair
-- Prints terminal instructions to add your public key to GitHub or other Git services
+<u>**To add your key to GitHub:**</u>
+  1. Copy the displayed public key (content of the .pub file)
+  2. Go to GitHub > Settings > SSH and GPG keys > New SSH key
+  3. Paste your public key into the "Key" field and save
 
-### Config Notes
-
-- **Private Key**: The file without the `.pub` extension.
-- **Public Key**: The `.pub` file, which you should add to your Git service account.
+**Remember:** to never share your private key. The public key (.pub file) is safe to share and is what you add to GitHub.
+  
 
 ## Additional Setup Instructions
 
-### Configure SSH for Multiple Keys
+### Configuration for Multiple SSH Keys
 
 If you have multiple keys and need to specify which to use with GitHub:
 
@@ -71,7 +75,7 @@ If you have multiple keys and need to specify which to use with GitHub:
     ssh-add ~/.ssh/your_private_key_name
     ```
 
-3. Verify the key is added:
+3. Verify the key is added (keep this private):
     ```bash
     ssh-add -l
     ```
