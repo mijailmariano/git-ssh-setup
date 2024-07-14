@@ -1,0 +1,9 @@
+name: gitSSH
+channels:
+  - defaults
+dependencies:
+  - python>=3.12  # or whatever version you're using
+  - pip
+  - pip:
+    - setuptools==69.5.1
+    - wheel==0.43.0

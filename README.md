@@ -1,17 +1,19 @@
-# SSH Key Generator for Git
+# Git SSH Key Generator
 
-This script automates the generation and setup of SSH keys for use with Git, especially for managing multiple keys and configurations with services like GitHub.
+This script creates and sets up SSH keys for Git services like GitHub, making it easier to manage multiple keys.
 
 ## Features
 
-- Generates SSH key pairs with a unique timestamp.
-- Configures SSH to use specific keys for GitHub.
-- Adds keys to the SSH agent for convenience.
+- [ ] Creates SSH key pairs with unique and timestamp
+- [ ] Sets up SSH for use with GitHub/GitLab
+- [ ] ~~Adds keys to the SSH agent for convenience~~
 
 ## Requirements
 
-- Python 3.12+ >> refer to the requirements.txt/yaml files
-- Access to a UNIX-like terminal (Linux, macOS)
+- [ ] Python 3.12+ 
+- [ ] Access to your UNIX-like terminal (Linux, macOS)
+
+See `requirements.txt/environment.yaml` for Python requirements
 
 ## Setup Instructions
 
@@ -26,20 +28,22 @@ This script automates the generation and setup of SSH keys for use with Git, esp
     python3 setupSSH.py
     ```
 
-## Usage
+3. **Follow Prompts to Create Your SSH Key**
+
+### What It Does
 
 Follow the prompts to enter your email address, which will be associated with your new SSH key. The script handles the rest, including:
 
-- Generating a new SSH key pair.
-- Adding the key to the SSH agent.
-- Outputting instructions to add your public key to GitHub or other Git services.
+- Links your email to your new SSH key
+- Creates a  SSH key pair
+- Prints terminal instructions to add your public key to GitHub or other Git services
 
-### Important Notes
+### Config Notes
 
 - **Private Key**: The file without the `.pub` extension.
 - **Public Key**: The `.pub` file, which you should add to your Git service account.
 
-## Additional Setup
+## Additional Setup Instructions
 
 ### Configure SSH for Multiple Keys
 
@@ -55,7 +59,7 @@ If you have multiple keys and need to specify which to use with GitHub:
     ```
     Replace `id_rsa_git_YYYYMMDD_HHMMSS` with your key filename.
 
-### Start the SSH Agent Manually (use as needed in your workflow)
+### Manual SSH Agent Setup (use as needed in your workflow)
 
 1. Start the SSH agent:
     ```bash
@@ -84,7 +88,7 @@ If you have multiple keys and need to specify which to use with GitHub:
 
 ## Security Considerations
 
-- Keep your private key secure and never share it.
-- Regularly update or rotate your SSH keys for enhanced security.
+- [ ] Keep your private key secure and never share it.
+- [ ] Regularly update or rotate your SSH keys for enhanced security.
 
-For detailed instructions on adding keys to specific Git services, consult their respective documentation.
+For detailed instructions on adding keys to specific Git services, check-out their official docs.
