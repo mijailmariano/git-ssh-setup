@@ -1,12 +1,8 @@
-import os
-import stat
+# dependencies
 from pathlib import Path
-from typing import Optional
 import datetime
 import subprocess
 import logging
-
-# TODO: create env, requirements.txt/yaml files
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -75,7 +71,7 @@ def main() -> None:
         private_key, public_key = generate_ssh_key(email)
     
         if private_key.exists() and public_key.exists():
-            print(f"SSH key pair generated successfully:")
+            print("SSH key pair generated successfully:")
             print(f"Private key: {private_key}")
             print(f"Public key: {public_key}")
             
