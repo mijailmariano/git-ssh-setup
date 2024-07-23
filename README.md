@@ -10,7 +10,7 @@ This script creates and sets up SSH keys for Git services like GitHub, making it
 
 ## Requirements
 
-- [x] Python 3.12+ 
+- [x] Python 3.10+ 
 - [x] Access to your UNIX-like terminal (Linux, macOS)
 
 See `requirements.txt/environment.yaml` for Python requirements
